@@ -1,5 +1,5 @@
 # logutil
-ログ出力ユーティリティ
+Pythonでログ出力
 
 ## 概要
 Pythonでログ出力する。
