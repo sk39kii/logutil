@@ -16,7 +16,7 @@ from logutil import LogUtil
 
 ### 使い方
 
-##### コンソールに出力する
+#### コンソールに出力する
 
 インスタンス生成時にパラメータをつけない場合はコンソール(標準出力)に出力します。
 ```py
@@ -33,7 +33,7 @@ log.critical('hello critical')
 ## Output on the Console Only
 log = LogUtil('console')
 ```
-##### 出力イメージ
+#### 出力イメージ
 
 ```sh
 ## Output example
@@ -44,7 +44,7 @@ log = LogUtil('console')
 2016-09-23 11:08:09,477 CRITICAL [logutil.py main] hello critical
 ```
 
-##### ファイルに出力する
+#### ファイルに出力する
 
 パラメータに'file'を渡すとファイルに出力します。  
 出力先のファイルは./log/app.logです。
@@ -53,20 +53,20 @@ log = LogUtil('console')
 log = LogUtil('file')
 ```
 
-##### コンソールとファイルに出力する
+#### コンソールとファイルに出力する
 パラメータに'dual'を渡すとコンソールとファイルに出力します。
 ```py
 ## Output on the Console and in the File(./log/app.log)
 log = LogUtil('dual')
 ```
-##### ログレベルについて
+#### ログレベルについて
 
 ログレベルの優先順位は以下の通りです。
 - log level: debug < info < warning < error < critical
 
 デフォルトは'debug'です。
 
-##### ログレベルを変更する
+#### ログレベルを変更する
 
 ログレベルを変更したい場合はインスタンス生成後に以下のようにします。
 ```py
@@ -79,11 +79,11 @@ log.set_log_level('error')
 
 ログレベルやファイルの出力先は、./config/logging.confに記載している。  
 
-##### ファイルの出力先を変えたい場合
+#### ファイルの出力先を変えたい場合
 
 - [handler_fileHandler]のargsを変更
 
-##### 出力形式を変えたい場合
+#### 出力形式を変えたい場合
 
 - [formatter_logFormatter]のformatを変更
 
